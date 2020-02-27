@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sql">
+ 
+<!-- 	<select id="test"> -->
+<!-- 		select 1 as cnt -->
+<!-- 	</select> -->
+ 	
+ 	<insert id="setData" parameterType="Map">
+ 		INSERT INTO goodee VALUES  (#{title}, #{date}, #{type})
+ 	</insert>
+ 	
+ 	<delete id="removeData">
+ 		delete from goodee
+ 	</delete>
+ 	
+ 	<select id="getData" resultType="Map">
+ 		SELECT * FROM goodee
+ 	</select>
+ 	
+ 	<insert id="setNaverData" parameterType="Map">
+ 		INSERT INTO naverBlog VALUES  (#{title}, #{content}, #{name})
+ 	</insert>
+ 	
+ 	<delete id="removeNaverData">
+ 		delete from naverBlog
+ 	</delete>
+ 	
+ 	<select id="getNaverData" resultType="Map">
+ 		SELECT * FROM naverBlog
+ 	</select>
+ 	
+</mapper>
